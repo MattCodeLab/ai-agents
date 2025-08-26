@@ -1,0 +1,43 @@
+{
+  "prompt_name": "Deep Research on Key Performance Indicators (KPI) for Tech industry",
+  "description": "Perform research on Key Performance Indicators used by Central banks' data projects and technology companies, that facilitates holistic monitoring of project progress and ease of understanding for management reporting.",
+  "model_configuration": {
+    "model_name": "gemini-2.5-pro",
+    "temperature": 0.3,
+    "top_p": 0.2,
+    "max_output_tokens": 80000
+  },
+  "input_variables": [
+    {
+      "name": "topic,
+      "description": "Key Performance Indicators used by the technology industry and central banks's data & tech projects, a benchmarking analysis",
+      "type": "string"
+    },
+    {
+      "name": "audience",
+      "description": "Senior Management, Directors, and Project Managers of Data & Statistic Department of Bank Negara Malaysia",
+      "type": "string"
+    },
+    {
+      "name": "purpose_1",
+      "description": "To make key decisions on which Key Performance Indicators to use for an upcoming data modernisation project involving key stakeholders from financial institutions, whom Bank Negara Malaysia is collaborating with to improve data collection infrastructure",
+      "type": "string"
+    },
+    {
+      "name": "purpose_2",
+      "description": "The KPIs researched should cover the projects holistically, allowing for ease of monitoring and reporting towards management on a weekly basis.",
+      "type": "string"
+    },
+    {
+      "name": "format",
+      "description": "A structured research report which informs on key points, wording should be concise, straight to the point, evidence-based and factual. Each fact should be cited appropriately and described in the report",
+      "type": "string"
+    }
+    
+  ],
+  "prompt_template": {
+    "system_instruction": "You are a senior research analyst and strategist with expertise in synthesizing complex information from multiple sources into clear, structured, and insightful reports. Your task is to perform a deep research dive and present your findings in the specified format.",
+    
+    "user_instruction": "Please generate a comprehensive research report on the following topic: **{topic}**.\n\nThe final report must be tailored for an audience of **{audience}** and must strictly adhere to the following structure and format. Use LaTeX for any mathematical or scientific notations where appropriate.\n\n### Report Structure\n\n**1. Report Title:** Create a concise and descriptive title for the report.\n\n**2. Executive Summary & Key Points:**\n   - Begin with a brief paragraph summarizing the topic's significance and the report's main conclusions.\n   - Follow with 10-15 bullet points highlighting the most critical findings and implications.\n\n**3. Detailed Analysis: The 5Ws and 1H**\n   - Address each of the following questions in detail, using them as subheadings for your analysis. Provide thorough, well-researched answers for each point.\n\n   **A. What? (The Subject)**\n   - What is the precise definition and scope of '{topic}'?\n   - What are its core components, technologies, or methodologies?\n   - What is the current state-of-the-art and what are its primary limitations?\n\n   **B. Who? (The Stakeholders)**\n   - Who are the parties that are subject to the implementation of {topic} in Bank Negara Malaysia?\n   - Who are to benefit most from which indicators?\n\n   **C. Where? (The Context)**\n   - Which company is notable for using which Key Performance Indicators to track which projects?\n\n   **D. When? (The Timeline)**\n   - How often is should the Key Performance Indicators be tracked and reported?\n   - When should which indicators be implemented and observed?\n   - When is the time to pay more attention to the indicators, what are some of the signals that should induce further action?\n\n   **E. Why? (The Rationale)**\n   - Why is '{topic}' important?\n   - What indicators are most important for which {purpose_1}?\n   - What indicators are most important for which {purpose_2}?\n\n   **F. How? (Implementation Plan)**\n   - How does '{topic}' work on a functional or operational level?\n   - How is it being implemented or applied in real-world scenarios across the industry?\n   - How is its performance, success, or impact being measured?\n   - How should the phasing be done for the Key Performance Indicators, as in which should come first and prioritised?\n   - How should the Key Performance Indicators be presented?\n   - How often should the Indicators be reviewed and observed? \n\n**4. Conclusion & Strategic Outlook:**\n   - Briefly summarize the report's core findings from the 5W1H analysis.\n   - Provide a extended discussion on the alignment of the above {topic} with {purpose_1} and {purpose_2}, and how to implement the researched material.\n\n**Formatting Guidelines:**\n- Use Markdown for all formatting (headings, subheadings, lists).\n- Ensure the language is professional, objective, and clear.\n- Use '$' or '$$' delimiters for all LaTeX notations.\n Also ensure the overall report aligns with {format}."
+  }
+}
